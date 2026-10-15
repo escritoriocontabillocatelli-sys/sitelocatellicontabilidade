@@ -208,19 +208,6 @@ h1 span {
     color: var(--secondary);
 }
 
-.nav-whatsapp {
-    background: var(--primary);
-    color: white !important;
-
-    padding: 12px 20px;
-
-    border-radius: 50px;
-}
-
-.nav-whatsapp:hover {
-    background: var(--secondary);
-}
-
 .menu-toggle {
     display: none;
 
@@ -1294,3 +1281,92 @@ h1 span {
     }
 
 }
+
+/* Container que empilha os botões um embaixo do outro */
+.container-botoes-sociais {
+  display: flex;
+  flex-direction: column; /* Empilha os elementos verticalmente */
+  align-items: center;    /* Centraliza os botões (mude para flex-start se preferir alinhado à esquerda) */
+  gap: 12px;              /* Espaço de 12px entre o botão de cima e o de baixo */
+}
+
+/* Base de estilo idêntica para ambos os botões */
+.btn-social {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 200px;              /* Defini uma largura fixa para os dois botões terem o mesmo tamanho exato */
+  padding: 12px 24px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-family: sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+  color: #ffffff !important;
+  transition: background 0.3s;
+}
+
+/* Cor do botão do Instagram (Verde Escuro) */
+.btn-instagram {
+  background-color: #0b4f47;
+}
+.btn-instagram:hover {
+  background-color: #083b35;
+}
+
+/* Cor do botão do Facebook (Mesmo verde ou se preferir o azul do Facebook use #1877F2) */
+.btn-facebook {
+  background-color: #0b4f47; /* Mantive o verde padrão da identidade da Locatelli */
+}
+.btn-facebook:hover {
+  background-color: #083b35;
+}
+
+/* Ajuste dos ícones SVG */
+.icon-social {
+  width: 25px;
+  height: 25px;
+  fill: #ffffff;
+}
+.btn-menu-contato {
+  background-color: #0b4f47; /* O mesmo verde padrão */
+  color: #ffffff !important;  /* Letra branca */
+  padding: 8px 20px;         /* Espaçamento interno para criar o formato do botão */
+  border-radius: 50px;       /* Bordas arredondadas */
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.btn-menu-contato:hover {
+  background-color: #083b35; /* Efeito ao passar o mouse */
+}
+/* Balão verde flutuante */
+.btn-whatsapp-fixo {
+  position: fixed !important;
+  bottom: 20px !important;
+  right: 20px !important;
+  width: 60px !important;
+  height: 60px !important;
+  background-color: #25d366 !important; /* Cor real do WhatsApp */
+  border-radius: 50% !important; /* Formato circular perfeito */
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.25) !important;
+  z-index: 9999 !important;
+  transition: transform 0.2s ease-in-out !important;
+}
+
+.btn-whatsapp-fixo:hover {
+  transform: scale(1.08) !important;
+}
+
+/* Ajuste milimétrico do ícone interno oficial */
+.icon-whats-vetor {
+  width: 36px !important;   /* Tamanho ideal para manter a proporção do balão */
+  height: 36px !important;
+  fill: #ffffff !important;  /* Telefone e balão interno ficam totalmente brancos */
+}
+
